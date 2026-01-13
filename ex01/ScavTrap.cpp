@@ -1,0 +1,46 @@
+#include "ScavTrap.hpp"
+
+#include <iostream>
+
+ScavTrap::ScavTrap( void )
+{
+	std::cout << "ScavTrap's default constructor called" << std::endl;
+}
+
+
+ScavTrap::ScavTrap( std::string name )
+{
+	this->set_name(name);
+	this->set_hit_points(100);
+	this->set_energy_points(50);
+	this->set_attack_damage(20);
+	std::cout << "ScavTrap's parametric constructor called" << std::endl;
+}
+
+ScavTrap::ScavTrap( const ScavTrap & src )
+{
+	std::cout << "ScavTrap's copy constructor called" << std::endl;
+	*this = src;
+}
+
+ScavTrap::~ScavTrap()
+{
+	std::cout << "ScavTrap's destructor called" << std::endl;
+}
+
+void	ScavTrap::attack( const std::string& target )
+{
+	if (this->get_energy_points() == 0 || this->get_hit_points() <= 0)
+	{
+		std::cout << "ScavTrap " << this->get_name() << " can't attack" << std::endl;
+		return;
+	}
+	std::cout << "ScavTrap " << this->get_name() << " attacks " << target;
+	this->takeDamage(this->get_attack_damage());
+	this->set_energy_points(this->get_energy_points() + 1);
+}
+
+void	ScavTrap::guardGate()
+{
+	std::cout << "ScavTrap is now in Gate keeper mode" << std::endl;
+}
