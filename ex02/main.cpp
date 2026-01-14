@@ -5,29 +5,34 @@
 void	test00( void )
 {
 	std::cout << "TEST00" << std::endl;
-	ClapTrap a( "clap_trap" );
+	ClapTrap claptrap( "clap_trap" );
 
-	std::cout << "ClapTrap "<< a.get_name() << "'s hit points: " << a.get_hit_points() << std::endl;
-	std::cout << "ClapTrap "<< a.get_name() << "'s energy points: " << a.get_energy_points() << std::endl;
-	std::cout << "ClapTrap "<< a.get_name() << "'s attack damage: " << a.get_attack_damage() << std::endl;
-	a.attack( "another_clap_trap" );
-	std::cout << "ClapTrap "<< a.get_name() << "'s hit points: " << a.get_hit_points() << std::endl;
-	std::cout << "ClapTrap "<< a.get_name() << "'s energy points: " << a.get_energy_points() << std::endl;
-	a.beRepaired( 2 );
-	std::cout << "ClapTrap "<< a.get_name() << "'s hit points: " << a.get_hit_points() << std::endl;
-	std::cout << "ClapTrap "<< a.get_name() << "'s energy points: " << a.get_energy_points() << std::endl;
+	std::cout << "ClapTrap "<< claptrap.get_name() << "'s hit points: " << claptrap.get_hit_points() << std::endl;
+	std::cout << "ClapTrap "<< claptrap.get_name() << "'s energy points: " << claptrap.get_energy_points() << std::endl;
+	std::cout << "ClapTrap "<< claptrap.get_name() << "'s attack damage: " << claptrap.get_attack_damage() << std::endl;
+	claptrap.attack( "another_clap_trap" );
+	std::cout << "ClapTrap "<< claptrap.get_name() << "'s hit points: " << claptrap.get_hit_points() << std::endl;
+	std::cout << "ClapTrap "<< claptrap.get_name() << "'s energy points: " << claptrap.get_energy_points() << std::endl;
+	claptrap.beRepaired( 2 );
+	std::cout << "ClapTrap "<< claptrap.get_name() << "'s hit points: " << claptrap.get_hit_points() << std::endl;
+	std::cout << "ClapTrap "<< claptrap.get_name() << "'s energy points: " << claptrap.get_energy_points() << std::endl;
 }
 
 void	test01( void )
 {
 	std::cout << "TEST01" << std::endl;
-	ScavTrap	b( "scav_trap" );
+	ScavTrap	scavtrap( "scav_trap" );
 
-	b.attack( "another_scav_trap" );
-	std::cout << "ScavTrap "<< b.get_name() << "'s hit points: " << b.get_hit_points() << std::endl;
-	b.beRepaired( 2 );
-	std::cout << "ScavTrap "<< b.get_name() << "'s hit points: " << b.get_hit_points() << std::endl;
-	b.guardGate();
+	std::cout << "ScavTrap " << scavtrap.get_name() << "'s hit points: " << scavtrap.get_hit_points() << std::endl;
+	std::cout << "ScavTrap " << scavtrap.get_name() << "'s energy points: " << scavtrap.get_energy_points() << std::endl;
+	std::cout << "ScavTrap " << scavtrap.get_name() << "'s attack damage: " << scavtrap.get_attack_damage() << std::endl;
+	scavtrap.attack( "another_scav_trap" );
+	std::cout << "ScavTrap "<< scavtrap.get_name() << "'s hit points: " << scavtrap.get_hit_points() << std::endl;
+	std::cout << "ScavTrap " << scavtrap.get_name() << "'s energy points: " << scavtrap.get_energy_points() << std::endl;
+	scavtrap.beRepaired( 2 );
+	std::cout << "ScavTrap "<< scavtrap.get_name() << "'s hit points: " << scavtrap.get_hit_points() << std::endl;
+	std::cout << "ScavTrap " << scavtrap.get_name() << "'s energy points: " << scavtrap.get_energy_points() << std::endl;
+	scavtrap.guardGate();
 }
 
 void	test02( void )
