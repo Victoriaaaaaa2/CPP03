@@ -7,10 +7,8 @@ ScavTrap::ScavTrap( void )
 	std::cout << "ScavTrap's default constructor called" << std::endl;
 }
 
-
-ScavTrap::ScavTrap( std::string name )
+ScavTrap::ScavTrap( std::string name ) : ClapTrap(name)
 {
-	this->set_name(name);
 	this->set_hit_points(100);
 	this->set_energy_points(50);
 	this->set_attack_damage(20);
@@ -37,7 +35,7 @@ void	ScavTrap::attack( const std::string& target )
 	}
 	std::cout << "ScavTrap " << this->get_name() << " attacks " << target;
 	this->takeDamage(this->get_attack_damage());
-	this->set_energy_points(this->get_energy_points() + 1);
+	this->set_energy_points(this->get_energy_points() - 1);
 }
 
 void	ScavTrap::guardGate()

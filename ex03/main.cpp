@@ -1,6 +1,7 @@
 #include <iostream>
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 void	test00( void )
 {
@@ -42,11 +43,24 @@ void	test02( void )
 	fragtrap.highFiveGuys();	
 }
 
+void	test03( void )
+{
+	std::cout << "TEST03" << std::endl;
+	DiamondTrap	diamondtrap( "diamond_trap" );
+
+	diamondtrap.attack( "another_frag_trap" );
+	std::cout << "Hit points: " << diamondtrap.get_hit_points() << std::endl;
+	diamondtrap.beRepaired( 2 );
+	std::cout << "Hit points: " << diamondtrap.get_hit_points() << std::endl;
+	diamondtrap.whoAmI();		
+}
+
 int	main( void ) {
 
 	test00();
 	test01();
 	test02();
+	test03();
 
 	return 0;
 }
