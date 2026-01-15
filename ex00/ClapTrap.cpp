@@ -52,14 +52,14 @@ void	ClapTrap::attack( const std::string& target )
 		std::cout << "ClapTrap " << this->_name << " can't attack" << std::endl;
 		return;
 	}
-	std::cout << "ClapTrap " << this->_name << " attacks " << target;
-	this->takeDamage(this->_attack_damage);
+	std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attack_damage << " points of damage!" << std::endl;
 	this->_energy_points--;
 }
 
 void	ClapTrap::takeDamage( unsigned int amount )
 {
-	std::cout << ", causing " << amount << " points of damage!" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " takes " << amount << " points of damage!" << std::endl;
+	this->_hit_points -= amount;
 }
 
 void	ClapTrap::beRepaired( unsigned int amount )
