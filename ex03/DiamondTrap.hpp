@@ -9,7 +9,7 @@ public:
 	DiamondTrap();
 	DiamondTrap( std::string name );
 	DiamondTrap( const DiamondTrap & src );
-	~DiamondTrap();
+	virtual ~DiamondTrap();
 
 	void	whoAmI();
 };
