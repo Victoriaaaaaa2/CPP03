@@ -28,5 +28,8 @@ FragTrap::~FragTrap()
 
 void	FragTrap::highFiveGuys(void)
 {
-	std::cout << "FragTrap " << this->_name << " does a positive high-fives request" << std::endl;
+	std::cout << "FragTrap " 
+			  << this->_name 
+			  << " does a positive high-fives request" 
+			  << std::endl;
 }

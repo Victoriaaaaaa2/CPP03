@@ -28,16 +28,29 @@ ScavTrap::~ScavTrap()
 
 void	ScavTrap::attack( const std::string& target )
 {
-	if (this->get_energy_points() == 0 || this->get_hit_points() <= 0)
+	if (this->_energy_points == 0 || this->_energy_points <= 0)
 	{
-		std::cout << "ScavTrap " << this->get_name() << " can't attack" << std::endl;
+		std::cout << "ScavTrap " 
+				  << this->get_name() 
+				  << " can't attack" 
+				  << std::endl;
 		return;
 	}
-	std::cout << "ScavTrap " << this->get_name() << " attacks " << target << ", causing " << this->_attack_damage << " points of damage!" << std::endl;
+	std::cout << "ScavTrap " 
+			  << this->get_name() 
+			  << " attacks " 
+			  << target 
+			  << ", causing " 
+			  << this->_attack_damage 
+			  << " points of damage!" 
+			  << std::endl;
 	this->_energy_points -= 1;
 }
 
 void	ScavTrap::guardGate()
 {
-	std::cout << "ScavTrap " << this->_name << " is now in Gate keeper mode" << std::endl;
+	std::cout << "ScavTrap " 
+			  << this->_name 
+			  << " is now in Gate keeper mode" 
+			  << std::endl;
 }
