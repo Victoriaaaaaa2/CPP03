@@ -41,10 +41,15 @@ void	test02( void )
 	std::cout << "TEST02" << std::endl;
 	FragTrap	fragtrap( "frag_trap" );
 
+	std::cout << "FragTrap " << fragtrap.get_name() << "'s hit points: " << fragtrap.get_hit_points() << std::endl;
+	std::cout << "FragTrap " << fragtrap.get_name() << "'s energy points: " << fragtrap.get_energy_points() << std::endl;
+	std::cout << "FragTrap " << fragtrap.get_name() << "'s attack damage: " << fragtrap.get_attack_damage() << std::endl;
 	fragtrap.attack( "another_frag_trap" );
-	std::cout << "Hit points: " << fragtrap.get_hit_points() << std::endl;
+	std::cout << "FragTrap " << fragtrap.get_name() << "'s hit points: " << fragtrap.get_hit_points() << std::endl;
+	std::cout << "FragTrap " << fragtrap.get_name() << "'s energy points: " << fragtrap.get_energy_points() << std::endl;
 	fragtrap.beRepaired( 2 );
-	std::cout << "Hit points: " << fragtrap.get_hit_points() << std::endl;
+	std::cout << "FragTrap " << fragtrap.get_name() << "'s hit points: " << fragtrap.get_hit_points() << std::endl;
+	std::cout << "FragTrap " << fragtrap.get_name() << "'s energy points: " << fragtrap.get_energy_points() << std::endl;
 	fragtrap.highFiveGuys();	
 }
 
@@ -53,10 +58,15 @@ void	test03( void )
 	std::cout << "TEST03" << std::endl;
 	DiamondTrap	diamondtrap( "diamond_trap" );
 
+	std::cout << "DiamondTrap " << diamondtrap.get_name() << "'s hit points: " << diamondtrap.get_hit_points() << std::endl;
+	std::cout << "DiamondTrap " << diamondtrap.get_name() << "'s energy points: " << diamondtrap.get_energy_points() << std::endl;
+	std::cout << "DiamondTrap " << diamondtrap.get_name() << "'s attack damage: " << diamondtrap.get_attack_damage() << std::endl;
 	diamondtrap.attack( "another_frag_trap" );
-	std::cout << "Hit points: " << diamondtrap.get_hit_points() << std::endl;
+	std::cout << "DiamondTrap " << diamondtrap.get_name() << "'s hit points: " << diamondtrap.get_hit_points() << std::endl;
+	std::cout << "DiamondTrap " << diamondtrap.get_name() << "'s energy points: " << diamondtrap.get_energy_points() << std::endl;
 	diamondtrap.beRepaired( 2 );
-	std::cout << "Hit points: " << diamondtrap.get_hit_points() << std::endl;
+	std::cout << "DiamondTrap " << diamondtrap.get_name() << "'s hit points: " << diamondtrap.get_hit_points() << std::endl;
+	std::cout << "DiamondTrap " << diamondtrap.get_name() << "'s energy points: " << diamondtrap.get_energy_points() << std::endl;
 	diamondtrap.whoAmI();		
 }
 

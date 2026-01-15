@@ -9,9 +9,9 @@ FragTrap::FragTrap( void )
 
 FragTrap::FragTrap( std::string name ) : ClapTrap(name)
 {
-	this->set_hit_points(100);
-	this->set_energy_points(100);
-	this->set_attack_damage(30);
+	this->_hit_points = 100;
+	this->_energy_points = 100;
+	this->_attack_damage = 30;
 	std::cout << "FragTrap's parametric constructor called" << std::endl;
 }
 

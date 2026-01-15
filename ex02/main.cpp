@@ -40,10 +40,15 @@ void	test02( void )
 	std::cout << "TEST02" << std::endl;
 	FragTrap	fragtrap( "frag_trap" );
 
+	std::cout << "FragTrap " << fragtrap.get_name() << "'s hit points: " << fragtrap.get_hit_points() << std::endl;
+	std::cout << "FragTrap " << fragtrap.get_name() << "'s energy points: " << fragtrap.get_energy_points() << std::endl;
+	std::cout << "FragTrap " << fragtrap.get_name() << "'s attack damage: " << fragtrap.get_attack_damage() << std::endl;
 	fragtrap.attack( "another_frag_trap" );
-	std::cout << "Hit points: " << fragtrap.get_hit_points() << std::endl;
+	std::cout << "FragTrap " << fragtrap.get_name() << "'s hit points: " << fragtrap.get_hit_points() << std::endl;
+	std::cout << "FragTrap " << fragtrap.get_name() << "'s energy points: " << fragtrap.get_energy_points() << std::endl;
 	fragtrap.beRepaired( 2 );
-	std::cout << "Hit points: " << fragtrap.get_hit_points() << std::endl;
+	std::cout << "FragTrap " << fragtrap.get_name() << "'s hit points: " << fragtrap.get_hit_points() << std::endl;
+	std::cout << "FragTrap " << fragtrap.get_name() << "'s energy points: " << fragtrap.get_energy_points() << std::endl;
 	fragtrap.highFiveGuys();	
 }
 

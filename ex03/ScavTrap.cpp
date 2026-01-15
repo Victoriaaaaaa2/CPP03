@@ -9,9 +9,9 @@ ScavTrap::ScavTrap( void )
 
 ScavTrap::ScavTrap( std::string name ) : ClapTrap(name)
 {
-	this->set_hit_points(100);
-	this->set_energy_points(50);
-	this->set_attack_damage(20);
+	this->_hit_points = 100;
+	this->_energy_points = 50;
+	this->_attack_damage = 20;
 	std::cout << "ScavTrap's parametric constructor called" << std::endl;
 }
 
