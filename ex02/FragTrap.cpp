@@ -26,6 +26,21 @@ FragTrap::~FragTrap()
 	std::cout << "FragTrap's destructor called" << std::endl;
 }
 
+FragTrap &	FragTrap::operator=( FragTrap const & rhs )
+{
+	std::cout << "FragTrap's copy assignment operator called" << std::endl;
+
+	if ( this != &rhs )
+	{
+		this->_name = rhs._name;
+		this->_hit_points = rhs._hit_points;
+		this->_energy_points = rhs._energy_points;
+		this->_attack_damage = rhs._attack_damage;
+	}
+
+	return (*this);
+}
+
 void	FragTrap::highFiveGuys(void)
 {
 	std::cout << "FragTrap " 

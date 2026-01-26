@@ -10,6 +10,8 @@ public:
 	DiamondTrap( std::string name );
 	DiamondTrap( const DiamondTrap & src );
 	virtual ~DiamondTrap();
+	
+	DiamondTrap &	operator=( DiamondTrap const & rhs );
 
 	void	whoAmI();
 };

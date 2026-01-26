@@ -28,6 +28,21 @@ DiamondTrap::~DiamondTrap()
 	std::cout << "DiamondTrap's destructor called" << std::endl;
 }
 
+DiamondTrap &	DiamondTrap::operator=( DiamondTrap const & rhs )
+{
+	std::cout << "DiamondTrap's copy assignment operator called" << std::endl;
+
+	if ( this != &rhs )
+	{
+		this->_name = rhs._name;
+		this->_hit_points = rhs._hit_points;
+		this->_energy_points = rhs._energy_points;
+		this->_attack_damage = rhs._attack_damage;
+	}
+
+	return (*this);
+}
+
 void	DiamondTrap::whoAmI()
 {
 	std::cout << "this->_name: "

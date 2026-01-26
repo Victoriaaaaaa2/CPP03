@@ -11,6 +11,8 @@ public:
 	FragTrap( const FragTrap & src );
 	virtual ~FragTrap( void );
 
+	FragTrap &	operator=( FragTrap const & rhs );
+
 	void	highFiveGuys(void);
 };
 
